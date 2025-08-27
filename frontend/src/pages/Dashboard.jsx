@@ -108,7 +108,7 @@ import { PlusIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import VideoManager from "../components/VideoManager";
 
 const Dashboard = () => {
-  const { user, setUser } = useAuth(); 
+  const { user, setUser } = useAuth();
   const [stats, setStats] = useState(null);
   const [videos, setVideos] = useState([]);
   const [showEditProfile, setShowEditProfile] = useState(false);
@@ -158,7 +158,7 @@ const Dashboard = () => {
     fetchStats();
     fetchVideos();
   }, []);
-  
+
   useEffect(() => {
     if (user) {
       setEditForm({
@@ -274,7 +274,7 @@ const Dashboard = () => {
       )}
 
       <div className="flex items-center justify-between mb-3 mt-8">
-        <h2 className="text-xl font-bold">My Videos</h2>
+        <h2 className="text-xl text-white font-bold">My Videos</h2>
         <Link
           to="/"
           className="flex gap-2 px-4 py-2 rounded bg-rose-600 text-white font-semibold items-center hover:bg-rose-700 transition-colors"
