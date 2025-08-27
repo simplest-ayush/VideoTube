@@ -481,7 +481,6 @@ const VideoEditor = ({ videoId, onClose, onUpdated }) => {
                   onClick={() => fileThumbRef.current?.click()}
                 >
                   {form.thumbnail ? "Change Thumbnail" : "Select New Thumbnail"}
-                  {console.log(form)}
                 </button>
                 <input
                   ref={fileThumbRef}

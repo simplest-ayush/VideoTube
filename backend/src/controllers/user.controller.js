@@ -127,6 +127,9 @@ const loginUser = asyncHandler(async (req, res) => {
 
     const { accessToken, refreshToken } = await generateAccessAndRefreshToken(user._id)
 
+    localStorage.setItem("accessToken", accessToken);
+    localStorage.setItem("refreshToken", refreshToken);
+
 
     // this loggedInUser will contain all the details (access and refresh token but we will not show password and refresh token to user)
     const loggedInUser = await User.findById(user._id).select(" -password -refreshToken ")
@@ -203,7 +206,7 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
             secure: true
         }
 
-        console.log("New refresh token is : ", newRefreshToken);
+        // console.log("New refresh token is : ", newRefreshToken);
 
 
         return res

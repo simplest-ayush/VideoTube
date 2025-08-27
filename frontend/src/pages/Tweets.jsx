@@ -80,7 +80,6 @@ const Tweets = () => {
         </div>
       </form>
       <div>
-        {console.log(tweets)}
         {loading ? (
           <div className="text-gray-400">Loading tweets...</div>
         ) : tweets.length === 0 ? (
